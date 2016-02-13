@@ -1,0 +1,15 @@
+<!-- Display a list of users -->
+<template name="availableUsers">
+
+  {{#if currentUser}}
+  <h2>Choose someone to chat with:</h2>
+  {{else}}
+  <h2>You must be logged in to chat:</h2>
+  {{/if}}
+
+  <div class="row">
+    {{#each users}}
+    {{> availableUser}}
+    {{/each}}
+  </div>
+</template>
